@@ -1,0 +1,14 @@
+{
+  "cssTheme": "Things",
+  "showRibbon": false,
+  "showViewHeader": true,
+  "nativeMenus": false,
+  "enabledCssSnippets": [
+    "My Font",
+    "pdf_header_breaks"
+  ],
+  "theme": "obsidian",
+  "interfaceFontFamily": "",
+  "textFontFamily": "",
+  "baseFontSize": 20
+}

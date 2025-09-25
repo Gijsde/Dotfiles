@@ -1,0 +1,15 @@
+@media print {
+  h1 {
+    page-break-before: always;
+  }
+
+  h2 {
+    page-break-before: always;
+  }
+
+  /* Optional: prevent first header from adding an empty first page */
+  h1:first-of-type,
+  h2:first-of-type {
+    page-break-before: auto;
+  }
+}

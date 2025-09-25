@@ -1,0 +1,266 @@
+{
+  "main": {
+    "id": "2aa430d5157e7c6c",
+    "type": "split",
+    "children": [
+      {
+        "id": "227163dbde659b4e",
+        "id": "57a8996f2d0158e0",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "b6f1efe92dbf3edd",
+            "id": "f02cb404f2502518",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Enemy 2 - Drekavac.md",
+                "file": "Year 2/P4/webapplicaties 2/temp.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Enemy 2 - Drekavac"
+            }
+          },
+          {
+            "id": "653177fbe5d3e256",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Year 2/P4/Webtechnologie 3/hoorcollege 1 aantekeningen.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "hoorcollege 1 aantekeningen"
+              "title": "temp"
+            }
+          }
+        ],
+        "currentTab": 1
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "a30904cfc0dafaf8",
+    "type": "split",
+    "children": [
+      {
+        "id": "7eca24c5ba04cb7a",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "03333bd510258974",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "10cc77353431ea32",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "tag:#titel",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "098c52511b56b2da",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 339.5,
+    "collapsed": true
+  },
+  "right": {
+    "id": "88c93435f8ccead2",
+    "type": "split",
+    "children": [
+      {
+        "id": "8dcc588f61957434",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "f7be4615ccf3be2d",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Year 2/P3/Databases 2/Opgaven week 5.pdf",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for Opgaven week 5"
+            }
+          },
+          {
+            "id": "abcb83e4cc5d3619",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Year 2/ISY/Technisch Portfolio Individueel.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from Technisch Portfolio Individueel"
+            }
+          },
+          {
+            "id": "1ee55654a4367786",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "9971b52b00a2ce0a",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Year 2/ISY/Technisch Portfolio Individueel.md"
+              },
+              "icon": "lucide-list",
+              "title": "Outline of Technisch Portfolio Individueel"
+            }
+          },
+          {
+            "id": "957930df224ffbb5",
+            "type": "leaf",
+            "state": {
+              "type": "git-view",
+              "state": {},
+              "icon": "git-pull-request",
+              "title": "Source Control"
+            }
+          },
+          {
+            "id": "aeb220d362932a05",
+            "type": "leaf",
+            "state": {
+              "type": "github-copilot-chat-view",
+              "state": {},
+              "icon": "bot-message-square",
+              "title": "Copilot Chat"
+            }
+          }
+        ],
+        "currentTab": 4
+      }
+    ],
+    "direction": "horizontal",
+    "width": 200,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "bases:Create new base": false,
+      "daily-notes:Open today's daily note": true,
+      "switcher:Open quick switcher": true,
+      "graph:Open graph view": true,
+      "canvas:Create new canvas": true,
+      "templates:Insert template": true,
+      "command-palette:Open command palette": true,
+      "obsidian-git:Open Git source control": false
+    }
+  },
+  "active": "653177fbe5d3e256",
+  "active": "f02cb404f2502518",
+  "lastOpenFiles": [
+    "Year 2/P4/Webtechnologie 3/leesopdracht week 5.md",
+    "Year 2/P4/webapplicaties 2/temp.md",
+    "Year 2/P4/Ontwikkelstraten/TODOFILE.md",
+    "Usefull general.md",
+    "GitHub.md",
+    "Year 2/P4/Ontwikkelstraten/[[OWS4.md",
+    "Year 2/P4/Ontwikkelstraten/geautomatiseerd testen.md",
+    "Year 2/P4/Ontwikkelstraten/OWS6 Complexiteit beheren.pdf",
+    "Year 2/P4/Ontwikkelstraten/Ontwikkelstraten hoorcollege 6.md",
+    "Year 2/P4/Webtechnologie 3/Hoorcollege 6 - het probleem met state.md",
+    "Year 2/P4/Ontwikkelstraten/OWS6 Complexiteit beheren.pdf.odp",
+    "Year 2/P4/Ontwikkelstraten/lu318887bbqi.tmp",
+    "Year 2/P4/Ontwikkelstraten/OWS4 Softwarekwaliteit.pdf",
+    "Year 2/P4/Ontwikkelstraten/OWS5 Test-driven development I.pdf",
+    "Year 2/P4/Ontwikkelstraten/Ontwikkelstraten hoorcollege 5.md",
+    "Year 2/P4/Ontwikkelstraten/lu31433d39.tmp",
+    "Year 2/P4/Webtechnologie 3/Leesopdracht voor 2e inlevermoment.md",
+    "obsidian bullshit/Pasted image 20250525202858.png",
+    "obsidian bullshit/Pasted image 20250525202404.png",
+    "obsidian bullshit/Pasted image 20250525202213.png",
+    "obsidian bullshit/Pasted image 20250525202019.png",
+    "Year 2/P4/webapplicaties 2/REQS gesprek ICC 6-5-2025.pdf",
+    "Year 2/P4/webapplicaties 2/wat te bespreken.md",
+    "Year 2/P4/Ontwikkelstraten/Ontwikkelstraten hoorcollege 4.md",
+    "Year 2/P4/Ontwikkelstraten/OWS1 Software engineering.pdf",
+    "Year 2/P4/Webtechnologie 3/Hoorcollege 3? wat dieper in javascript.md",
+    "obsidian bullshit/Pasted image 20250520091606.png",
+    "obsidian bullshit/Pasted image 20250520083702.png",
+    "Year 2/P4/Ontwikkelstraten/OWS4 Softwarekwaliteit.pptx",
+    "Year 2/P4/webapplicaties 2/waar op letten voor deze periode.md",
+    "obsidian bullshit/Pasted image 20250515084411.png",
+    "Year 2/P4/Ontwikkelstraten/Ontwikkelstraten hoorcollege 3.md",
+    "Year 2/P4/webapplicaties 2",
+    "obsidian bullshit/Pasted image 20250514111123.png",
+    "obsidian bullshit/Pasted image 20250514111025.png",
+    "obsidian bullshit/Pasted image 20250514105451.png",
+    "Year 2/P4/International communication/What to say(1).md",
+    "Year 2/P4/International communication/What to say.md",
+    "Year 2/P4/Ontwikkelstraten/Notities hoorcollege 1.md",
+    "Year 2/P4/Webtechnologie 3/hoorcollege 1 aantekeningen.md",
+    "Year 2/P4/Webtechnologie 3",
+    "Year 2/P4/Ontwikkelstraten",
+    "Year 2/P4",
+    "Year 2/P3/gespreksvaardigheden/Untitled 1.md",
+    "Year 2/P3/gespreksvaardigheden/Reflectie Verslag Gijs Dekker.md",
+    "Year 2/P3/Databases 2/Aantekeningen 24-2-2025.md",
+    "Year 2/P3/gespreksvaardigheden/Leerdoelen voor 28-02-2025.md",
+    "Year 2/P3/Databases 2/Aantekeningen 27-02-2025.md",
+    "Year 2/P3/Databases 2/Aantekeningen presentatie 2.md",
+    "Untitled.canvas",
+    "Year 1/random/Untitled.canvas",
+    "random/Untitled.canvas",
+    "Untitled 1.canvas"
+  ]
+}

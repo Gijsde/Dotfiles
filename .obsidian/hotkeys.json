@@ -1,0 +1,61 @@
+{
+  "editor:insert-wikilink": [
+    {
+      "modifiers": [
+        "Mod"
+      ],
+      "key": "Numpad7"
+    }
+  ],
+  "editor:toggle-numbered-list": [
+    {
+      "modifiers": [
+        "Mod"
+      ],
+      "key": "Numpad4"
+    }
+  ],
+  "easy-typing-obsidian:easy-typing-format-switch": [],
+  "editor:focus-left": [
+    {
+      "modifiers": [
+        "Alt",
+        "Mod"
+      ],
+      "key": "ArrowLeft"
+    }
+  ],
+  "app:go-back": [],
+  "app:go-forward": [],
+  "editor:focus-right": [
+    {
+      "modifiers": [
+        "Alt",
+        "Mod"
+      ],
+      "key": "ArrowRight"
+    }
+  ],
+  "file-explorer:new-file": [
+    {
+      "modifiers": [
+        "Mod"
+      ],
+      "key": "N"
+    },
+    {
+      "modifiers": [
+        "Alt"
+      ],
+      "key": "Insert"
+    }
+  ],
+  "obsidian-emoji-toolbar:emoji-picker:open-picker": [
+    {
+      "modifiers": [
+        "Alt"
+      ],
+      "key": "E"
+    }
+  ]
+}

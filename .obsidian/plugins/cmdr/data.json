@@ -1,0 +1,36 @@
+{
+  "confirmDeletion": false,
+  "showAddCommand": true,
+  "debug": false,
+  "editorMenu": [],
+  "fileMenu": [],
+  "leftRibbon": [],
+  "rightRibbon": [],
+  "titleBar": [],
+  "statusBar": [],
+  "pageHeader": [],
+  "macros": [],
+  "explorer": [
+    {
+      "id": "obsidian-git:open-git-view",
+      "icon": "lucide-github",
+      "name": "Git: Open source control view",
+      "mode": "any"
+    }
+  ],
+  "hide": {
+    "statusbar": [],
+    "leftRibbon": []
+  },
+  "spacing": 8,
+  "advancedToolbar": {
+    "rowHeight": 48,
+    "rowCount": 1,
+    "spacing": 0,
+    "buttonWidth": 48,
+    "columnLayout": false,
+    "mappedIcons": [],
+    "tooltips": false,
+    "heightOffset": 0
+  }
+}
