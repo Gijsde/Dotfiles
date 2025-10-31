@@ -1,0 +1,58 @@
+{
+	"layer": "bottom",
+	"position": "top",
+	"no-reserve": true,
+	"height": 30,
+	"modules-left": ["clock"],
+    	"modules-center": ["hyprland/workspaces"],
+   	"modules-right": [
+		"network", 
+		"battery", 
+		"pulseaudio", 
+	],
+
+	"custom/my_button": {
+  		"format": "⏻",
+  		"on-click": "~/.config/hypr/scripts/power_menu.sh",
+		"tooptip": false
+	},
+
+    	"hyprland/window": {
+      		"format": "{class}",
+		"empty-text": ""
+    	},
+    	"hyprland/workspaces": {
+  		"disable-scroll": true,
+  		"all-outputs": true,
+  		"warp-on-scroll": false,
+  		"format": "{name}"
+	},
+    
+    	"clock": {
+      		"format": "  {:%a %d %b %H:%M}",
+      		"tooltip-format": "{:%A, %B %d %Y}",
+		"on-click": "calendar"
+    	},
+  
+    	"network": {
+      		"format-wifi": "  {essid}",
+      		"format-ethernet": "  {ifname}",
+      		"format-disconnected": "⚠️  Disconnected",
+		"on-click": "nm-connection-editor"
+    	},
+  
+	"battery": {
+		"format": "{icon} {capacity}%",
+    		"format-charging": " {icon} {capacity}%",
+    		"format-icons": ["", "", "", "", ""]
+	},
+
+
+  
+    	"pulseaudio": {
+      		"format": "  {volume}%",
+      		"format-muted": " ",
+		"on-click": "pavucontrol"
+    	}
+}
+ 

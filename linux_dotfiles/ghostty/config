@@ -1,0 +1,5 @@
+background = "#1e1e2e"
+foreground = "ffffff"
+background-opacity = 0.6
+
+font-family = "JetBrainsMono Nerd Font", monospace
