@@ -1,6 +1,7 @@
 * {
     font-family: "JetBrainsMono Nerd Font", monospace;
-    font-size: 13px;
+    font-size: 8px;
+    color: #ffffff;
 }
 
 window#waybar {
@@ -9,40 +10,44 @@ window#waybar {
     box-shadow: none;
 }
 
-#workspaces button {
-    padding: 0 6px;
+#workspaces {
     background-color: #1e1e2e;
-    border-radius: 0;
-    margin-top: 3px;
-    margin-bottom: 3px;
+    border-radius: 0 0 10px 10px;
 }
 
 #workspaces button.active {
     background-color: #313244;
+    border-radius: 0;
     color: #89b4fa;
-    margin-top: 3px;
-    margin-bottom: 3px;
-}
-
-#workspaces button:first-child {
-    border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;
-    margin-left: 3px;
 }
 
 #workspaces button:last-child {
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px;
-    margin-right: 3px;
+    border-radius: 0 0 10px 0;
 }
 
-#clock,
-#network,
-#battery,
-#pulseaudio,
+#workspaces button:first-child {
+    border-radius: 0 0 0 10px;
+}
+
+#battery, #pulseaudio {
+    background-color: #1e1e2e;
+    padding: 0 8px;
+}
+
+#network {
+    background-color: #1e1e2e;
+    padding: 0 8px;
+    border-radius: 0 0 10px 0;
+}
+
+#clock {
+    background-color: #1e1e2e;
+    border-radius: 0 0 0 10px;
+    padding: 0 8px;
+}
 #window,
 #tray {
-    padding: 0 6px;
+    padding: 0 4px;
     background-color: #1e1e2e;
     margin: 3px;
     border-radius: 10px;
@@ -51,12 +56,4 @@ window#waybar {
 #battery.warning {
     background-color: #f9e2af;
     color: #1e1e2e;
-}
-
-#custom-my_button {
-    padding-left: 6px;
-    padding-right: 8px;
-    background-color: #1e1e2e;
-    margin: 3px;
-    border-radius: 10px;
 }
