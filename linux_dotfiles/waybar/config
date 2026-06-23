@@ -3,13 +3,13 @@
 	"position": "top",
 	"no-reserve": true,
 	"height": 30,
-	"modules-left": ["clock"],
-    	"modules-center": ["hyprland/workspaces"],
-   	"modules-right": [
-		"network", 
-		"battery", 
-		"pulseaudio", 
+	"modules-left": [
+		"battery",
+		"pulseaudio",
+		"network"
 	],
+    	"modules-center": ["hyprland/workspaces"],
+   	"modules-right": ["clock"],
 
 	"custom/my_button": {
   		"format": "⏻",
@@ -38,7 +38,7 @@
       		"format-wifi": "  {essid}",
       		"format-ethernet": "  {ifname}",
       		"format-disconnected": "⚠️  Disconnected",
-		"on-click": "nm-connection-editor"
+		"on-click": "ghostty -e nmtui"
     	},
   
 	"battery": {
