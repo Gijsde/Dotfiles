@@ -1,5 +1,7 @@
 background = "#1e1e2e"
 foreground = "ffffff"
-background-opacity = 0.6
+background-opacity = 0.8
 
 font-family = "JetBrainsMono Nerd Font", monospace
+
+confirm-close-surface = false
