@@ -1,6 +1,10 @@
 vim.pack.add {
-	"https://github.com/catppuccin/nvim",
+    "https://github.com/catppuccin/nvim",
     "https://github.com/neovim/nvim-lspconfig",
+    "https://github.com/williamboman/mason.nvim",
+    "https://github.com/williamboman/mason-lspconfig.nvim",
+    "https://github.com/zapling/mason-conform.nvim",
+    "https://github.com/rshkarin/mason-nvim-lint",
     "https://github.com/windwp/nvim-autopairs",
     "https://github.com/stevearc/oil.nvim",
     "https://github.com/ibhagwan/fzf-lua",
@@ -22,6 +26,7 @@ require('nvim-ts-autotag').setup()
 
 vim.cmd.colorscheme("catppuccin")
 
+
 -- keybindings
 vim.g.mapleader = " "
 vim.keymap.set("n", "<leader>e", vim.diagnostic.open_float)
@@ -30,6 +35,7 @@ vim.keymap.set('n', '<leader>h', '<C-w>h', { noremap = true, silent = true })
 vim.keymap.set('n', '<leader>j', '<C-w>j', { noremap = true, silent = true })
 vim.keymap.set('n', '<leader>k', '<C-w>k', { noremap = true, silent = true })
 vim.keymap.set('n', '<leader>l', '<C-w>l', { noremap = true, silent = true })
+
 
 -- vim settings
 vim.o.number = true
@@ -40,20 +46,36 @@ vim.opt.tabstop = 4
 vim.opt.shiftwidth = 4
 vim.opt.softtabstop = 4
 vim.opt.expandtab = true
-vim.opt.scrolloff = 8;
+vim.opt.scrolloff = 8
 vim.opt.swapfile = false
 
 
--- autocomplete
-vim.lsp.enable({
-    "pyright",
-    "lua_ls",
-    "clangd",
-    "ts_ls",
-    "html",
-    "cssls",
-    "jsonls",
-    "eslint",
+-- MASON & LSP SETUP
+require("mason").setup()
+
+-- Automatically manage and install LSP servers
+require("mason-lspconfig").setup({
+    ensure_installed = {
+        "pyright",
+        "lua_ls",
+        "clangd",
+        "ts_ls",
+        "html",
+        "cssls",
+        "jsonls",
+        "eslint",
+    },
+})
+
+require('mason-conform').setup({
+    automatic_installation = true,
+    ensure_installed = {
+        "stylua",
+        "ruff", -- Contains ruff_format
+        "black",
+        "clang-format",
+        "prettier",
+    },
 })
 
 -- Diagnostic display settings
@@ -63,12 +85,8 @@ vim.diagnostic.config({
     underline = true,
     update_in_insert = false,
     severity_sort = true,
-    float = {
-        source = true,
-    },
+    float = { source = true },
 })
-
-local diagnostics_enabled = true
 
 vim.o.autocomplete = true
 
@@ -111,30 +129,17 @@ vim.opt.pumheight = 5
 -- Comment.nvim setup
 require('Comment').setup()
 
--- rainbow-delimiters setup
-require('rainbow-delimiters.setup').setup()
-
 -- Oil (file explorer)
 require('oil').setup({
-    view_options = {
-        show_hidden = true,
-    }
+    view_options = { show_hidden = true }
 }) 
 vim.keymap.set('n', '-', '<CMD>Oil<CR>', { desc = 'Open parent directory' })
 
 -- fzf-lua
 local fzf = require('fzf-lua')
-vim.keymap.set('n', '<leader>ff', function()
-    fzf.files({ cwd = vim.fn.getcwd() })
-end, { desc = 'Find files' })
-
-vim.keymap.set('n', '<leader>fg', function()
-    fzf.live_grep({ cwd = vim.fn.getcwd() })
-end, { desc = 'Live grep' })
-
-vim.keymap.set('n', '<leader>fb', function()
-    fzf.buffers({ cwd = vim.fn.getcwd() })
-end, { desc = 'Find buffers' })
+vim.keymap.set('n', '<leader>ff', function() fzf.files({ cwd = vim.fn.getcwd() }) end, { desc = 'Find files' })
+vim.keymap.set('n', '<leader>fg', function() fzf.live_grep({ cwd = vim.fn.getcwd() }) end, { desc = 'Live grep' })
+vim.keymap.set('n', '<leader>fb', function() fzf.buffers({ cwd = vim.fn.getcwd() }) end, { desc = 'Find buffers' })
 
 -- treesitter
 vim.opt.runtimepath:append(vim.fn.stdpath('data') .. '/site/pack/core/opt/nvim-treesitter')
@@ -165,33 +170,45 @@ require('rainbow-delimiters.setup').setup({
     },
 })
 
--- linting
+-- ==========================================
+-- LINTING (Mason Integrated)
+-- ==========================================
 local lint = require('lint')
 
 lint.linters_by_ft = {
-  python     = { 'pylint' },
-  javascript = { 'eslint_d' },
-  typescript = { 'eslint_d' },
-  lua        = { 'luacheck' },
-  c          = { 'cppcheck' },
+    python     = { 'pylint' },
+    javascript = { 'eslint_d' },
+    typescript = { 'eslint_d' },
+    lua        = { 'luacheck' },
+    c          = { 'cpplint' },
 }
 
-vim.api.nvim_create_autocmd({ 'BufWritePost', 'BufReadPost' }, {
-  callback = function()
-    lint.try_lint()
-  end,
+-- Bridge mason and nvim-lint to handle installations automatically
+require('mason-nvim-lint').setup({
+    automatic_installation = true,
 })
 
+vim.api.nvim_create_autocmd({ 'BufWritePost', 'BufReadPost' }, {
+    callback = function()
+        lint.try_lint()
+    end,
+})
 
--- formatting
+-- ==========================================
+-- FORMATTING (Conform)
+-- ==========================================
 require('conform').setup({
     formatters_by_ft = {
+        lua = { "stylua" },
+        python = { "ruff_format", "black" }, -- Uses ruff if available, otherwise black
+        c = { "clang-format" },
         javascript = { "prettier" },
         typescript = { "prettier" },
         typescriptreact = { "prettier" },
         html = { "prettier" },
         css = { "prettier" },
         json = { "prettier" },
-    },
+    }
 })
+
 vim.keymap.set('n', '<leader>f', function() require('conform').format() end, { desc = 'Format buffer' })
